@@ -1,0 +1,566 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  cursor: url("/cursor.png"), auto;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f8bd86d1;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f8bd86d1;
+}
+.carousel-item {
+  width: 100%;
+  height: 720px;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+/* Logo Styling */
+.logo img {
+  height: 50px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+}
+/* menu */
+.menu-toggle {
+  color: black;
+  margin-right: 20px;
+}
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  padding: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f8bd86; /* Hover color */
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-btn a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #128c7e; /* WhatsApp green */
+  color: rgb(255, 248, 248);
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn a:hover {
+  background-color: #f8bd86a9; /* Darker green on hover */
+}
+
+.whatsapp-btn img {
+  height: 20px; /* Adjust as needed */
+}
+
+/* Hamburger Menu Icon (Hidden by Default) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 812px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .whatsapp-btn {
+    display: none; /* Hide WhatsApp button on mobile */
+  }
+}
+
+/* Gradient Overlay for Carousel
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #ffffff 70%);
+  pointer-events: none;
+}
+.carousel-caption {
+  position: absolute;
+} */
+
+/* .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    padding-bottom: 75%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    padding-bottom: 100%;
+    width: 100%;
+  }
+}
+ */
+
+
+/* product css */
+
+/* Our collection Section (Gallery Section) */
+.latest-news {
+  padding: 5rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.latest-news h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.news-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.news-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Remove Gap Between Sections */
+.hero + .latest-news {
+  margin-top: -1px;
+}
+/* Sale Heading */
+
+.sale-tag {
+  position: relative;
+  display: inline-block;
+  background: #f91515e2;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  top: 0;
+}
+.price {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.buy-now {
+  background-color: #f8bd86;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.buy-now:hover {
+  background-color: #333;
+  color: white;
+}
+#h{
+  height: 75px; ;
+
+}
+#d{ 
+  height: 100px;
+
+}
+
+/* Why Section */
+#about {
+  background: #333;
+  color: #f8bd86d1;
+  padding: 50px;
+  text-align: left;
+  border-radius: 10px;
+}
+#abouth {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+}
+/* Delivery Section Styling */
+.delivery-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f8bd86;
+  color: #333;
+  padding: 50px;
+  text-align: left;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+
+.delivery-content {
+  flex: 1;
+  max-width: 50%; 
+  justify-content: center;
+  text-align: center;
+  /* margin-left: 80px; */
+}
+
+.delivery-content h2 {
+  font-size: 48px;
+  color: #333; 
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.delivery-content p {
+  font-size: 26px;
+  text-align: left;
+  color: #666; 
+}
+
+.delivery-image {
+  flex: 1;
+  max-width: 50%; /* Image takes 50% of the width */
+  text-align: right; /* Align image to the right */
+}
+
+.delivery-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Responsive Design for Delivery Section */
+@media (max-width: 768px) {
+  .delivery-section {
+    flex-direction: column; /* Stack content and image vertically on smaller screens */
+    text-align: center;
+  }
+
+  .delivery-content,
+  .delivery-image {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .delivery-image {
+    margin-top: 20px; /* Add space between content and image */
+    text-align: center; /* Center the image */
+  }
+
+  .delivery-content h2 {
+    font-size: 24px; /* Smaller heading on mobile */
+  }
+
+  .delivery-content p {
+    font-size: 14px; /* Smaller text on mobile */
+  }
+}
+
+/* FAQ Section */
+#faq {
+  padding: 50px;
+}
+.accordion-button {
+  background: #f8bd86d1;
+  color: rgb(8, 8, 8);
+}
+.accordion-button:not(.collapsed) {
+  background: #f8bd86d1;
+  color: rgb(0, 0, 0);
+}
+
+/* faq  */
+
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.faq-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f1f1f1;
+}
+
+.faq-question::after {
+  content: "+";
+  float: right;
+  font-size: 1.2rem;
+}
+
+.faq-question.active::after {
+  content: "-";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-answer p {
+  padding: 15px 0;
+}
+
+
+/* Footer */
+/* General Styles */
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px 20px;
+  /* border-radius: 10px; */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  /* height: 550px; */
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-section .social-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 220px;
+}
+
+.footer-section .social-links a {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  align-items: center;
+  
+}
+
+.footer-section .social-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media(max-width: 786px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+
+  .footer-section .social-links {
+    justify-content: center;
+  }
+}
